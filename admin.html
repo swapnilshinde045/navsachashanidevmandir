@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Navsacha Shani Mandir</title>
+    <meta name="robots" content="noindex, nofollow, noarchive">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+    <div class="admin-container">
+        <div class="admin-header">
+            <img src="image/logo.png" alt="Navsacha Shanidev Logo" class="admin-logo">
+            <h2>Admin Dashboard</h2>
+            <p>Update dynamic content for the temple website</p>
+        </div>
+        
+        <!-- Login Card -->
+        <div class="admin-card" id="loginCard">
+            <h3><i class="fa-solid fa-lock"></i> Admin Login</h3>
+            <p class="admin-desc">Please enter the administrator password to access the panel.</p>
+            <form id="loginForm">
+                <input type="password" id="adminPassword" placeholder="Enter Password" required>
+                <div id="loginStatus" class="status-message"></div>
+                <button type="submit" class="btn-primary">Login</button>
+            </form>
+        </div>
+
+        <!-- Main Admin Content (Hidden by default) -->
+        <div class="admin-card" id="adminCard" style="display: none;">
+            <h3><i class="fa-solid fa-bullhorn"></i> Scrolling News Headline</h3>
+            <p class="admin-desc">This text will scroll horizontally just below the main banner on the homepage. Use it for important announcements, daily quotes, or upcoming events.</p>
+            
+            <form id="headlineForm">
+                <textarea id="headlineInput" rows="4" placeholder="Loading current headline... Please wait." required></textarea>
+                <div id="statusMessage" class="status-message"></div>
+                <button type="submit" id="updateBtn" class="btn-primary">Update Headline</button>
+            </form>
+        </div>
+        <div class="back-link">
+            <a href="index.html"><i class="fa-solid fa-arrow-left"></i> Back to Website</a>
+        </div>
+    </div>
+
+    <!-- Firebase SDK (v8 Compat) -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
